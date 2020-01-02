@@ -15,41 +15,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-1V-rSj">
-                                <rect key="frame" x="182.5" y="433" width="49" height="30"/>
-                                <color key="backgroundColor" red="0.051884430129999999" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj3-1V-rSj">
+                                <rect key="frame" x="129.5" y="370.5" width="155" height="155"/>
+                                <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Udr-Vv-raT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ty-Ko-RhJ">
-                                <rect key="frame" x="154" y="490.5" width="106" height="30"/>
-                                <state key="normal" title="Stop Recording"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnA-HS-zmM"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DST-7o-S91">
-                                <rect key="frame" x="153.5" y="471" width="107" height="20.5"/>
+                                <rect key="frame" x="153.5" y="533.5" width="107" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ty-Ko-RhJ">
+                                <rect key="frame" x="160" y="562" width="94" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="uzQ-gy-e2y"/>
+                                </constraints>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnA-HS-zmM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4ty-Ko-RhJ" firstAttribute="centerX" secondItem="DST-7o-S91" secondAttribute="centerX" id="1Je-Lv-5h4"/>
                             <constraint firstItem="gj3-1V-rSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Dk-uc-A2F"/>
+                            <constraint firstItem="4ty-Ko-RhJ" firstAttribute="centerX" secondItem="DST-7o-S91" secondAttribute="centerX" id="B4p-h3-tbh"/>
+                            <constraint firstItem="4ty-Ko-RhJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="DnK-lU-v9c"/>
                             <constraint firstItem="DST-7o-S91" firstAttribute="centerX" secondItem="gj3-1V-rSj" secondAttribute="centerX" id="XwN-g7-UcQ"/>
                             <constraint firstItem="gj3-1V-rSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qX6-l9-Abq"/>
-                            <constraint firstItem="4ty-Ko-RhJ" firstAttribute="top" secondItem="DST-7o-S91" secondAttribute="bottom" constant="-1" id="vCP-i0-DvP"/>
                             <constraint firstItem="DST-7o-S91" firstAttribute="top" secondItem="gj3-1V-rSj" secondAttribute="bottom" constant="8" id="ve0-wV-Z4M"/>
+                            <constraint firstItem="4ty-Ko-RhJ" firstAttribute="top" secondItem="DST-7o-S91" secondAttribute="bottom" constant="8" symbolic="YES" id="zAE-qX-aGr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="recordButton" destination="gj3-1V-rSj" id="NIn-NM-0pX"/>
                         <outlet property="recordingLabel" destination="DST-7o-S91" id="yec-lO-LzV"/>
+                        <outlet property="stopRecordingButton" destination="4ty-Ko-RhJ" id="JKN-mu-P1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -57,4 +62,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RecordButton" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
 </document>
