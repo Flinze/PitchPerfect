@@ -131,13 +131,22 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-Rk-ObC" userLabel="Stop Button">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ju8-nf-9jM">
                                         <rect key="frame" x="0.0" y="532" width="382" height="177"/>
-                                        <state key="normal" image="Stop"/>
-                                        <connections>
-                                            <action selector="stopButtonPressed:" destination="Dcd-Vd-RfL" eventType="touchUpInside" id="wpi-Bu-dnE"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSg-Rk-ObC" userLabel="Stop Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="177"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                                <state key="normal" image="Stop"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="Dcd-Vd-RfL" eventType="touchUpInside" id="wpi-Bu-dnE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="QSg-Rk-ObC" firstAttribute="centerX" secondItem="ju8-nf-9jM" secondAttribute="centerX" id="8U2-Cp-Nly"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
